@@ -42,9 +42,9 @@ read -r VOLUMEPATH
 printf 'Type Mount Point ex>/data : '
 read -r MOUNTPOINT
 
-#checkFileSystem $VOLUMEPATH
-#createXFSFileSystem $VOLUMEPATH
-#createMountPoint $MOUNTPOINT
-#modifyFSTAB $VOLUMEPATH $MOUNTPOINT
+checkFileSystem $VOLUMEPATH
+createXFSFileSystem $VOLUMEPATH
+createMountPoint $MOUNTPOINT
+modifyFSTAB $VOLUMEPATH $MOUNTPOINT
 mountNewVolume $MOUNTPOINT
 showResult
