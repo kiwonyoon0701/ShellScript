@@ -4,7 +4,7 @@
 # Tested in zsh 5.3 (x86_64-apple-darwin18.0) in MAC
 git add .
 MYDATE=`date +"%Y-%m-%d-%H-%M-%S"`
-git status --porcelain |sed s/^...// | xargs sed -i '' 's/MY_ACCESS_KEY//g; s/MY_SECRET_ACCESS_KEY//g'
+git status --porcelain |sed s/^...// | xargs sed -i '' 's///g; s///g'
 git add .
 git commit -m $MYDATE
 git push
@@ -18,7 +18,7 @@ git push
 # Tested in zsh 5.3 (x86_64-apple-darwin18.0) in MAC
 git add .
 MYDATE=`date +"%Y-%m-%d-%H-%M-%S"`
-git status --porcelain |sed s/^...// | xargs sed -i '' 's?MY_ACCESS_KEY??g; s/MY_SECRET_ACCESS_KEY??g'
+git status --porcelain |sed s/^...// | xargs sed -i '' 's???g; s/??g'
 git add .
 git commit -m $MYDATE
 git push
